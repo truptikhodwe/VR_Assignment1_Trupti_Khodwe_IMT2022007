@@ -44,11 +44,15 @@ pip install opencv-python numpy matplotlib
 ## Part 1: Coin Detection and Segmentation
 
 ### a. Coin Detection
-- Used **Gaussian Blur** to smooth the image and reduce noise.
-- Applied **Adaptive Thresholding** to separate coins from the background.
-- Used **Contour Detection** to identify coin shapes.
-- Filtered out small contours based on area to remove noise.
-- Outlined detected coins using OpenCV contours.
+- Loaded the image from the given path.
+- Converted the image to grayscale.
+- Applied **Gaussian Blur** to smooth the image and remove noise.
+- Used **Adaptive Thresholding** to separate coins from the background.
+- **Detected contours** representing coin edges.
+- Filtered small contours based on area to remove unwanted noise.
+- Outlined detected coins on the original image using contours.
+- Converted the image to RGB format for proper display in Matplotlib.
+- Displayed the final image with detected coins.
 
 **Detected Coins:**  
 ![Detected Coins](Part%201/1_a.png)
@@ -56,9 +60,16 @@ pip install opencv-python numpy matplotlib
 ---
 
 ### b. Coin Segmentation
-- Applied **region-based segmentation** to isolate individual coins.
-- Used bounding boxes around detected coins.
-- Removed nested contours to prevent inner details (e.g., ₹10 coin inner ring) from being mistaken as separate coins.
+- Loaded the image from the given path.
+- Converted the image to grayscale.
+- Applied Gaussian Blur to smooth the image and remove noise.
+- Used Otsu’s Thresholding to convert the image into a binary mask.
+- Detected contours representing coin edges.
+- Filtered small contours based on area to remove unwanted detections.
+- Sorted the contours in descending order by area.
+- Removed nested contours to ensure only full coins were segmented.
+- Extracted each segmented coin using bounding boxes.
+- Displayed each segmented coin using Matplotlib.
 
 **Segmented Coins:**  
 ![Segmented Coins](Part%201/1_b.png)
@@ -66,8 +77,21 @@ pip install opencv-python numpy matplotlib
 ---
 
 ### c. Coin Counting
-- Used **Contours** to count distinct coins.
-- Displayed the **total number of detected coins** on the output image.
+- Loaded the image from the given path.
+- Converted the image from BGR to RGB for proper visualization.
+- Displayed the original image.
+- Converted the image to grayscale.
+- Applied Gaussian Blur to remove noise and smooth the image.
+- Displayed the blurred grayscale image.
+- Used Otsu’s Thresholding to create a binary mask.
+- Displayed the thresholded image.
+- Detected contours representing coin edges.
+- Filtered small contours based on area to remove unwanted detections.
+- Removed nested contours to ensure only full coins were counted.
+- Counted the number of detected coins and displayed the count.
+- Outlined detected coins on the original image.
+- Converted the result image to RGB for proper visualization.
+- Displayed the final image with detected coin count.
 
 **Total Coins Counted:**  
 ![Total Coins Counted](Part%201/1_c.png)
@@ -89,7 +113,7 @@ pip install opencv-python numpy matplotlib
 ## Results & Observations
 1. **Coin Detection & Counting**:
    - Successfully detected coins.
-   - Adaptive thresholding worked better than simple binary thresholding.
+   - Adaptive thresholding combined with contour filtering helped eliminate noise and inner contours (such as the inner ring of ₹10 coins), leading to more accurate coin counting.
 
 2. **Image Stitching**:
    - ORB feature detection worked well for matching overlapping regions.
