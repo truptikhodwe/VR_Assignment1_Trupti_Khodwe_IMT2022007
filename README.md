@@ -50,8 +50,8 @@ pip install opencv-python numpy matplotlib
 - Filtered out small contours based on area to remove noise.
 - Outlined detected coins using OpenCV contours.
 
-**Example Output:**  
-![Detected Coins](/home/trupti/Downloads/VR_Assignment1_Trupti_Khodwe_IMT2022007/Part 1/1_a.png)
+**Detected Coins:**  
+![Detected Coins](Part%201/1_a.png)
 
 ---
 
@@ -60,8 +60,8 @@ pip install opencv-python numpy matplotlib
 - Used bounding boxes around detected coins.
 - Removed nested contours to prevent inner details (e.g., ₹10 coin inner ring) from being mistaken as separate coins.
 
-**Example Output:**  
-![Segmented Coins](/home/trupti/Downloads/VR_Assignment1_Trupti_Khodwe_IMT2022007/Part 1/1_b.png)
+**Segmented Coins:**  
+![Segmented Coins](Part%201/1_b.png)
 
 ---
 
@@ -69,8 +69,8 @@ pip install opencv-python numpy matplotlib
 - Used **Contours** to count distinct coins.
 - Displayed the **total number of detected coins** on the output image.
 
-**Example Output:**  
-![Total Coins Counted](/home/trupti/Downloads/VR_Assignment1_Trupti_Khodwe_IMT2022007/Part 1/1_c.png)
+**Total Coins Counted:**  
+![Total Coins Counted](Part%201/1_c.png)
 
 ---
 
@@ -80,8 +80,8 @@ pip install opencv-python numpy matplotlib
 - Applied **Homography Transformation** to warp images and align them.
 - Stitched multiple images into a single panoramic view.
 
-**Example Output:**  
-![Stitched Panorama](/home/trupti/Downloads/VR_Assignment1_Trupti_Khodwe_IMT2022007/Part 2/Final Output Images/Final_Panorama.png)
+**Stitched Panorama:**  
+![Stitched Panorama](Part%202/Final%20Output%20Images/Final_Panorama.png)
 
 ---
 
