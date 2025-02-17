@@ -105,6 +105,9 @@ pip install opencv-python numpy matplotlib
 - Stitched multiple images into a single panoramic view.
 - Cropped the black areas to improve the final output
 
+**Detected Keypoints:**
+![Keypoints](Part%202/Final%20Output%20Images/keypoints.png)
+
 **Stitched Panorama:**  
 ![Stitched Panorama](Part%202/Final%20Output%20Images/Final_Panorama.png)
 
@@ -118,11 +121,15 @@ pip install opencv-python numpy matplotlib
 2. **Image Stitching**:
    - ORB feature detection worked well for matching overlapping regions.
    - Cropping the stitched image improved the final output quality.
+   - Seams occuring while stiching second and third image.
 
 ---
 
 ## Dataset
+- Part 2/ Final Output Images directory contains the final panorama which got generated and the keypoints which were detected.
+- Part 1/ 1_a.png has the image for coin detection.
+- Part 1/1_b.png has the image for coin segmentation.
+- Part 1/1_c.png has the image that counts the total number of coins.
 - All images used in this assignment are stored in the respective directories.
-- Users can replace the images with their own datasets for testing.
 
 ---
