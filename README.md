@@ -79,6 +79,7 @@ pip install opencv-python numpy matplotlib
 - Matched key points between overlapping images using **BFMatcher**.
 - Applied **Homography Transformation** to warp images and align them.
 - Stitched multiple images into a single panoramic view.
+- Cropped the black areas to improve the final output
 
 **Stitched Panorama:**  
 ![Stitched Panorama](Part%202/Final%20Output%20Images/Final_Panorama.png)
